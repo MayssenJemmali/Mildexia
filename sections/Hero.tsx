@@ -74,7 +74,10 @@ const Hero: FC<HeroProps> = ({ content }) => {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="px-8 py-3 bg-mildexia-primary hover:bg-mildexia-darkPrimary text-white rounded-full font-medium transition-all shadow-lg shadow-mildexia-primary/30 transform hover:-translate-y-1">
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-3 bg-mildexia-primary hover:bg-mildexia-darkPrimary text-white rounded-full font-medium transition-all shadow-lg shadow-mildexia-primary/30 transform hover:-translate-y-1"
+            >
               {content.buttons.contact}
             </button>
           </div>
