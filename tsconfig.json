@@ -10,10 +10,10 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "allowJs": true,
@@ -25,5 +25,12 @@
     },
     "allowImportingTsExtensions": true,
     "noEmit": true
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

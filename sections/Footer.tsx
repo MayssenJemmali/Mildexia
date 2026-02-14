@@ -1,11 +1,11 @@
-import React from 'react';
+import { type FC } from 'react';
 import { Content } from '../types';
 
 interface FooterProps {
   content: Content['footer'];
 }
 
-const Footer: React.FC<FooterProps> = ({ content }) => {
+const Footer: FC<FooterProps> = ({ content }) => {
   return (
     <footer className="py-12 bg-white dark:bg-black border-t border-gray-100 dark:border-gray-800">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">

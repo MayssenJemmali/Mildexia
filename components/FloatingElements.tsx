@@ -1,7 +1,7 @@
-import React from 'react';
+import { type FC } from 'react';
 import { motion } from 'framer-motion';
 
-const FloatingElements: React.FC = () => {
+const FloatingElements: FC = () => {
   // Generate random particles
   const particles = Array.from({ length: 15 }).map((_, i) => ({
     id: i,
@@ -36,7 +36,7 @@ const FloatingElements: React.FC = () => {
           }}
         />
       ))}
-      
+
       {/* Decorative Leaf Shapes (SVG) */}
       <motion.svg
         className="absolute top-20 left-10 w-24 h-24 text-mildexia-primary/10 dark:text-mildexia-neon/5"
@@ -46,7 +46,7 @@ const FloatingElements: React.FC = () => {
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       >
         <path d="M12 2C7.5 2 4 6.5 4 12s4.5 9 9 9 9-4.5 9-9c0-5.5-4.5-10-9-10zm0 16c-3.5 0-6.5-3-6.5-8s3-6.5 6.5-6.5 6.5 3 6.5 8-3 6.5-6.5 6.5z" />
-        <path d="M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" opacity="0.5"/>
+        <path d="M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" opacity="0.5" />
       </motion.svg>
     </div>
   );

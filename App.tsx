@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { type FC, useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import FloatingElements from './components/FloatingElements';
 import Hero from './sections/Hero';
@@ -10,10 +10,11 @@ import Sustainability from './sections/Sustainability';
 import ProductSpecs from './sections/ProductSpecs';
 import CTA from './sections/CTA';
 import Footer from './sections/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Language } from './types';
 import { CONTENT } from './constants';
 
-const App: React.FC = () => {
+const App: FC = () => {
   const [language, setLanguage] = useState<Language>('fr');
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
@@ -44,17 +45,17 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen relative font-sans overflow-x-hidden transition-colors duration-500">
-      
-      <Navbar 
-        language={language} 
-        setLanguage={setLanguage} 
-        theme={theme} 
-        toggleTheme={toggleTheme} 
+
+      <Navbar
+        language={language}
+        setLanguage={setLanguage}
+        theme={theme}
+        toggleTheme={toggleTheme}
       />
 
       <main className="relative">
         <FloatingElements />
-        
+
         <Hero content={currentContent.hero} />
         <About content={currentContent.about} />
         <Usage content={currentContent.usage} />
@@ -65,6 +66,7 @@ const App: React.FC = () => {
         <CTA content={currentContent.cta} />
       </main>
 
+      <ScrollToTop />
       <Footer content={currentContent.footer} />
     </div>
   );

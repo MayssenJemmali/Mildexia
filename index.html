@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mildexia | Protection Phytosanitaire</title>
-    <meta name="description" content="Bouclier Préventif Contre le Mildiou. Solution phytosanitaire à usage préventif." />
-    
-    <!-- Fonts: Inter and Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Poppins', 'sans-serif'],
-            },
-            colors: {
-              mildexia: {
-                cream: '#F4F7F2',
-                sage: '#D1E0D6',
-                deep: '#0B1410',
-                charcoal: '#1A2320',
-                neon: '#4ADE80',
-                primary: '#10B981',
-                darkPrimary: '#059669'
-              }
-            },
-            backgroundImage: {
-              'hero-light': 'linear-gradient(135deg, #1A2E22 0%, #D1E0D6 100%)',
-              'hero-dark': 'linear-gradient(135deg, #020403 0%, #112920 100%)',
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mildexia | Protection Phytosanitaire</title>
+  <meta name="description" content="Bouclier Préventif Contre le Mildiou. Solution phytosanitaire à usage préventif." />
+
+  <!-- Fonts: Inter and Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            mildexia: {
+              cream: '#F4F7F2',
+              sage: '#D1E0D6',
+              deep: '#0B1410',
+              charcoal: '#1A2320',
+              neon: '#4ADE80',
+              primary: '#10B981',
+              darkPrimary: '#059669'
             }
+          },
+          backgroundImage: {
+            'hero-light': 'linear-gradient(135deg, #1A2E22 0%, #D1E0D6 100%)',
+            'hero-dark': 'linear-gradient(135deg, #020403 0%, #112920 100%)',
           }
         }
       }
-    </script>
-    <style>
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      body {
-        transition: background-color 0.5s ease, color 0.5s ease;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.34.0"
-  }
-}
-</script>
+    }
+  </script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+  </style>
+
 </head>
-  <body class="antialiased bg-mildexia-cream text-slate-800 dark:bg-mildexia-deep dark:text-gray-100 selection:bg-mildexia-primary selection:text-white">
-    <div id="root"></div>
-  </body>
+
+<body
+  class="antialiased bg-mildexia-cream text-slate-800 dark:bg-mildexia-deep dark:text-gray-100 selection:bg-mildexia-primary selection:text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

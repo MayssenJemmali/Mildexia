@@ -38,6 +38,14 @@ export interface Content {
   product: {
     title: string;
     specs: string[];
+    packaging: {
+      title: string;
+      options: {
+        weight: string;
+        label: string;
+        description: string;
+      }[];
+    };
   };
   cta: {
     title: string;

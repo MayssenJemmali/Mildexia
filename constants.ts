@@ -53,10 +53,24 @@ export const CONTENT: Record<Language, Content> = {
       specs: [
         "Poudre soluble",
         "Application préventive",
-        "Conditionnement : 5 kg",
         "Conservation longue durée",
         "Fabrication en Tunisie"
-      ]
+      ],
+      packaging: {
+        title: "Conditionnements Disponibles",
+        options: [
+          {
+            weight: "5 kg",
+            label: "Professionnel",
+            description: "Idéal pour les exploitations agricoles et les grandes surfaces de culture."
+          },
+          {
+            weight: "1 kg",
+            label: "Petit exploitant",
+            description: "Adapté aux petites parcelles et à l'agriculture familiale."
+          }
+        ]
+      }
     },
     cta: {
       title: "Protégez vos cultures dès aujourd’hui.",
@@ -124,10 +138,24 @@ export const CONTENT: Record<Language, Content> = {
       specs: [
         "Soluble Powder",
         "Preventive Application",
-        "Packaging: 5 kg",
         "Long-term Storage",
         "Made in Tunisia"
-      ]
+      ],
+      packaging: {
+        title: "Available Packaging",
+        options: [
+          {
+            weight: "5 kg",
+            label: "Professional",
+            description: "Ideal for farms and large-scale cultivation."
+          },
+          {
+            weight: "1 kg",
+            label: "Smallholder",
+            description: "Suited for small plots and family farming."
+          }
+        ]
+      }
     },
     cta: {
       title: "Protect your crops today.",
