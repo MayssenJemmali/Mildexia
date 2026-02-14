@@ -6,7 +6,7 @@
   
   **Protects Your Crops. Respects the Environment.**
   
-  [Live Demo](https://mildexia.vercel.app) · [Report Bug](#) · [Request Feature](#)
+  [Live Application](https://mildexia.vercel.app)
 </div>
 
 ---
@@ -48,6 +48,13 @@ Formulated with a unique blend of **plant extracts** and **mineral-based ingredi
 
 ---
 
+## 📦 Usage Instructions
+
+1.  **Dosage**: Dissolve **5 kg** of Mildexia powder in **200 L** of water.
+2.  **Preparation**: Mix thoroughly until completely dissolved.
+3.  **Application**: Spray evenly on crop leaves, covering both upper and lower surfaces.
+
+---
 ## 💻 Technical Stack
 
 This landing page was built with modern web technologies to ensure a fast, responsive, and beautiful user experience.
@@ -97,14 +104,6 @@ Follow these steps to set up the project locally on your machine.
     ```sh
     npm run dev
     ```
-
----
-
-## 📦 Usage Instructions
-
-1.  **Dosage**: Dissolve **5 kg** of Mildexia powder in **200 L** of water.
-2.  **Preparation**: Mix thoroughly until completely dissolved.
-3.  **Application**: Spray evenly on crop leaves, covering both upper and lower surfaces.
 
 ---
 
