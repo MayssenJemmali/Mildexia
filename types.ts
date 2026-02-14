@@ -1,4 +1,4 @@
-export type Language = 'fr' | 'en';
+export type Language = 'fr' | 'en' | 'ar';
 
 export interface Content {
   hero: {

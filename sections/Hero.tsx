@@ -61,7 +61,7 @@ const Hero: FC<HeroProps> = ({ content }) => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-left"
+          className="text-start"
         >
           <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
             <span className="text-mildexia-primary">Mildexia</span> <br />
@@ -69,7 +69,7 @@ const Hero: FC<HeroProps> = ({ content }) => {
               {content.title}
             </span>
           </h1>
-          <p className="text-lg text-slate-600 dark:text-gray-400 mb-8 max-w-lg leading-relaxed border-l-4 border-mildexia-primary pl-6">
+          <p className="text-lg text-slate-600 dark:text-gray-400 mb-8 max-w-lg leading-relaxed border-s-4 border-mildexia-primary ps-6">
             {content.subtitle}
           </p>
 

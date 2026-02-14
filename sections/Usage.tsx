@@ -71,7 +71,7 @@ const Usage: FC<UsageProps> = ({ content }) => {
                 className="group relative flex flex-col items-center"
               >
                 {/* Large Background Number */}
-                <div className="absolute -top-16 -left-0 md:-left-4 text-[140px] leading-none font-display font-bold text-slate-200 dark:text-white/[0.03] select-none z-0 pointer-events-none transition-colors duration-500 group-hover:text-mildexia-sage/50 dark:group-hover:text-white/[0.05]">
+                <div className="absolute -top-16 -start-0 md:-start-4 text-[140px] leading-none font-display font-bold text-slate-200 dark:text-white/[0.03] select-none z-0 pointer-events-none transition-colors duration-500 group-hover:text-mildexia-sage/50 dark:group-hover:text-white/[0.05]">
                   0{index + 1}
                 </div>
 

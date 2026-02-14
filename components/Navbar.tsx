@@ -26,12 +26,21 @@ const NAV_LINKS = {
     { label: 'Product', href: '#product' },
     { label: 'Contact', href: '#contact' },
   ],
+  ar: [
+    { label: 'الرئيسية', href: '#hero' },
+    { label: 'من نحن', href: '#about' },
+    { label: 'الاستخدام', href: '#usage' },
+    { label: 'التركيبة', href: '#formulation' },
+    { label: 'المنتج', href: '#product' },
+    { label: 'اتصل بنا', href: '#contact' },
+  ],
 };
 
 const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -104,8 +113,8 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
-                      ? 'text-mildexia-primary bg-mildexia-primary/10'
-                      : 'text-slate-600 dark:text-gray-400 hover:text-mildexia-primary hover:bg-mildexia-primary/5'
+                    ? 'text-mildexia-primary bg-mildexia-primary/10'
+                    : 'text-slate-600 dark:text-gray-400 hover:text-mildexia-primary hover:bg-mildexia-primary/5'
                     }`}
                 >
                   {link.label}
@@ -117,13 +126,47 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
           {/* Right Controls */}
           <div className="flex items-center gap-4 z-10">
             {/* Language Toggle */}
-            <button
-              onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-              className="flex items-center gap-1.5 text-sm font-medium hover:text-mildexia-primary transition-colors text-slate-600 dark:text-gray-400"
-            >
-              <Globe size={18} />
-              <span className="uppercase">{language}</span>
-            </button>
+            {/* Language Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                title="Change Language"
+                className="flex items-center gap-1.5 text-sm font-medium hover:text-mildexia-primary transition-colors text-slate-600 dark:text-gray-400 group"
+              >
+                <Globe size={18} />
+                <span className="uppercase">{language}</span>
+              </button>
+
+              {isLangMenuOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-10"
+                    onClick={() => setIsLangMenuOpen(false)}
+                  />
+                  <div className="absolute right-0 mt-2 w-32 bg-white dark:bg-mildexia-deep border border-gray-100 dark:border-white/10 rounded-lg shadow-lg py-1 z-20">
+                    {[
+                      { code: 'en', label: 'English' },
+                      { code: 'fr', label: 'Français' },
+                      { code: 'ar', label: 'العربية' },
+                    ].map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.code as Language);
+                          setIsLangMenuOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5 transition-colors ${language === lang.code
+                            ? 'text-mildexia-primary font-medium'
+                            : 'text-slate-600 dark:text-gray-300'
+                          }`}
+                      >
+                        {lang.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
 
             {/* Theme Toggle */}
             <button
@@ -163,7 +206,7 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
 
         {/* Slide-in panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-72 bg-white dark:bg-mildexia-deep shadow-2xl transform transition-transform duration-300 ease-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`absolute end-0 top-0 h-full w-72 bg-white dark:bg-mildexia-deep shadow-2xl transform transition-transform duration-300 ease-out ${mobileMenuOpen ? 'translate-x-0' : 'ltr:translate-x-full rtl:-translate-x-full'
             }`}
         >
           <div className="pt-24 px-6 flex flex-col gap-2">
@@ -174,9 +217,9 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-left px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${isActive
-                      ? 'text-mildexia-primary bg-mildexia-primary/10'
-                      : 'text-slate-700 dark:text-gray-300 hover:text-mildexia-primary hover:bg-mildexia-primary/5'
+                  className={`text-start px-4 py-3 rounded-xl text-base font-medium transition-all duration-200 ${isActive
+                    ? 'text-mildexia-primary bg-mildexia-primary/10'
+                    : 'text-slate-700 dark:text-gray-300 hover:text-mildexia-primary hover:bg-mildexia-primary/5'
                     }`}
                 >
                   {link.label}

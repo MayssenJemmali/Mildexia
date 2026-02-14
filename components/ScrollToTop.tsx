@@ -21,9 +21,9 @@ const ScrollToTop: FC = () => {
         <button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className={`fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-mildexia-primary text-white shadow-lg shadow-mildexia-primary/30 flex items-center justify-center transition-all duration-300 hover:bg-mildexia-darkPrimary hover:scale-110 hover:-translate-y-0.5 active:scale-95 ${visible
-                    ? 'opacity-100 translate-y-0 pointer-events-auto'
-                    : 'opacity-0 translate-y-4 pointer-events-none'
+            className={`fixed bottom-8 end-8 z-50 w-12 h-12 rounded-full bg-mildexia-primary text-white shadow-lg shadow-mildexia-primary/30 flex items-center justify-center transition-all duration-300 hover:bg-mildexia-darkPrimary hover:scale-110 hover:-translate-y-0.5 active:scale-95 ${visible
+                ? 'opacity-100 translate-y-0 pointer-events-auto'
+                : 'opacity-0 translate-y-4 pointer-events-none'
                 }`}
         >
             <ArrowUp size={20} strokeWidth={2.5} />
