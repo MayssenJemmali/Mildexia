@@ -1,5 +1,5 @@
 import { type FC, useEffect, useState } from 'react';
-import { Moon, Sun, Globe, Menu, X } from 'lucide-react';
+import { Moon, Sun, Globe, Menu, X, ArrowUpRight } from 'lucide-react';
 import { Language } from '../types';
 
 interface NavbarProps {
@@ -34,6 +34,12 @@ const NAV_LINKS = {
     { label: 'المنتج', href: '#product' },
     { label: 'اتصل بنا', href: '#contact' },
   ],
+};
+
+const MORE_PRODUCTS = {
+  fr: 'Découvrir BlightX',
+  en: 'Discover BlightX',
+  ar: 'اكتشف BlightX',
 };
 
 const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) => {
@@ -126,6 +132,17 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
           {/* Right Controls */}
           <div className="flex items-center gap-4 z-10">
             {/* Language Toggle */}
+            {/* BlightX External Link */}
+            <a
+              href="https://blight-x.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-600 text-white text-xs font-bold tracking-wide shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5 hover:scale-105 transition-all duration-300 group"
+            >
+              <span>{MORE_PRODUCTS[language]}</span>
+              <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </a>
+
             {/* Language Dropdown */}
             <div className="relative">
               <button
@@ -156,8 +173,8 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
                           setIsLangMenuOpen(false);
                         }}
                         className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5 transition-colors ${language === lang.code
-                            ? 'text-mildexia-primary font-medium'
-                            : 'text-slate-600 dark:text-gray-300'
+                          ? 'text-mildexia-primary font-medium'
+                          : 'text-slate-600 dark:text-gray-300'
                           }`}
                       >
                         {lang.label}
@@ -226,6 +243,16 @@ const Navbar: FC<NavbarProps> = ({ language, setLanguage, theme, toggleTheme }) 
                 </button>
               );
             })}
+            {/* Mobile BlightX Link */}
+            <a
+              href="https://blight-x.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-600 text-white text-base font-bold shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-all duration-300 group"
+            >
+              <span>{MORE_PRODUCTS[language]}</span>
+              <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </a>
           </div>
         </div>
       </div>
