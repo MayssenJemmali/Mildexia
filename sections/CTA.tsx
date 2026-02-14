@@ -43,19 +43,6 @@ const CTA: FC<CTAProps> = ({ content }) => {
         <h2 className="text-4xl font-display font-bold mb-12">
           {content.title}
         </h2>
-
-        <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
-          <button className="px-8 py-4 bg-white text-mildexia-darkPrimary font-bold rounded-full shadow-lg hover:bg-gray-100 hover:-translate-y-1 transition-all">
-            {content.buttons.contact}
-          </button>
-          <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white/10 hover:-translate-y-1 transition-all">
-            {content.buttons.demo}
-          </button>
-          <button className="px-8 py-4 bg-mildexia-deep/20 text-white font-medium rounded-full hover:bg-mildexia-deep/30 transition-all backdrop-blur-sm">
-            {content.buttons.distributor}
-          </button>
-        </div>
-
         {/* Newsletter Section */}
         <div className="max-w-xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
           <h3 className="text-2xl font-bold mb-2">{content.newsletter.title}</h3>
