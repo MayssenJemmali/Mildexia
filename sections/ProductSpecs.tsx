@@ -2,7 +2,6 @@ import { type FC, useRef } from 'react';
 import { Content } from '../types';
 import { ShieldCheck, Package } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import BackImage from '../assets/Back.png';
 
 interface ProductSpecsProps {
   content: Content['product'];
@@ -84,7 +83,7 @@ const ProductSpecs: FC<ProductSpecsProps> = ({ content }) => {
                   }}
                 >
                   <img
-                    src={BackImage}
+                    src="/assets/Back.png"
                     alt="Mildexia Packaging Back"
                     className="w-full h-full object-contain select-none pointer-events-none"
                     draggable={false}

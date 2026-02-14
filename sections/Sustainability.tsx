@@ -2,7 +2,6 @@ import { type FC, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Content } from '../types';
 import { Leaf, CheckCircle2 } from 'lucide-react';
-import MarketingVideo from '../assets/Marketing.mp4';
 
 interface SustainabilityProps {
   content: Content['sustainability'];
@@ -91,7 +90,7 @@ const Sustainability: FC<SustainabilityProps> = ({ content }) => {
                 muted
                 playsInline
               >
-                <source src={MarketingVideo} type="video/mp4" />
+                <source src="/assets/Marketing.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 

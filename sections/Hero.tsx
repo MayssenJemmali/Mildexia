@@ -1,7 +1,6 @@
 import { type FC, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Content } from '../types';
-import FrontImage from '../assets/Front.png';
 
 interface HeroProps {
   content: Content['hero'];
@@ -120,7 +119,7 @@ const Hero: FC<HeroProps> = ({ content }) => {
                 }}
               >
                 <img
-                  src={FrontImage}
+                  src="/assets/Front.png"
                   alt="Mildexia Packaging Front"
                   className="w-full h-full object-contain select-none pointer-events-none"
                   draggable={false}
