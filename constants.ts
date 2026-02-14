@@ -78,6 +78,15 @@ export const CONTENT: Record<Language, Content> = {
         contact: "Nous contacter",
         demo: "Demander une démonstration",
         distributor: "Devenir distributeur"
+      },
+      newsletter: {
+        title: "Restez informé",
+        placeholder: "Votre adresse email",
+        button: "S'inscrire",
+        success: "Merci ! Vous êtes inscrit.",
+        error: "Une erreur est survenue.",
+        loading: "Inscription...",
+        disclaimer: "Recevez nos dernières actualités et soyez les premiers informés des nouvelles versions."
       }
     },
     footer: {
@@ -163,6 +172,15 @@ export const CONTENT: Record<Language, Content> = {
         contact: "Contact Us",
         demo: "Request a Demo",
         distributor: "Become a Distributor"
+      },
+      newsletter: {
+        title: "Stay Updated",
+        placeholder: "Your email address",
+        button: "Subscribe",
+        success: "Thanks! You're subscribed.",
+        error: "Something went wrong.",
+        loading: "Subscribing...",
+        disclaimer: "Receive our latest news and be the first to know about new releases."
       }
     },
     footer: {
@@ -248,6 +266,15 @@ export const CONTENT: Record<Language, Content> = {
         contact: "اتصل بنا",
         demo: "طلب عرض توضيحي",
         distributor: "كن موزعًا"
+      },
+      newsletter: {
+        title: "ابق على اطلاع",
+        placeholder: "عنوان بريدك الإلكتروني",
+        button: "اشتراك",
+        success: "شكراً! تم الاشتراك.",
+        error: "حدث خطأ ما.",
+        loading: "جاري الاشتراك...",
+        disclaimer: "احصل على آخر الأخبار وكن أول من يعرف عن الإصدارات الجديدة."
       }
     },
     footer: {

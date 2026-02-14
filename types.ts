@@ -54,6 +54,15 @@ export interface Content {
       demo: string;
       distributor: string;
     };
+    newsletter: {
+      title: string;
+      placeholder: string;
+      button: string;
+      success: string;
+      error: string;
+      loading: string;
+      disclaimer: string;
+    };
   };
   footer: {
     tagline: string;
